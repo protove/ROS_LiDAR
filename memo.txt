@@ -1,0 +1,29 @@
+conda create -n LiDAR python 3.8 -y
+conda activate LiDAR
+pip install --upgrade pip
+cd ~/vsc
+git clone https://github.com/protove/LiDAR.git
+cd LiDAR
+pip install -r requirements.txt
+
+1. Python whl 파일 설치 방법
+1) 설치하고자 하는 whl 파일을 다운로드 받는다.
+2) python -m pip install whl파일명
+출처: https://bobr2.tistory.com/entry/Python-whl-파일-설치-방법 [나만의공간:티스토리]
+
+python -m pip install open3d-0.16.0-cp38-cp38-manylinux_2_27_x86_64.whl
+
+$ source /opt/ros/melodic/setup.bash
+$ roscore
+
+another terminal
+$ source ~/catkin_ws/devel/setup.bash
+$ roscd
+$ cd lib/yujin_yrl_package/ 
+$ rosrun yujin_yrl_package yrl_pub
+
+python ros_pcd_save.py 
+python pcd_viewer.py
+
+cuda 설치
+conda install pytorch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 cudatoolkit=11.3 -c pytorch
